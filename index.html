@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="bio.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elementsToShow = document.querySelectorAll(
+                "#about p, #skills ul, .experience-item, .project-card"
+            );
+
+            function handleScroll() {
+                elementsToShow.forEach((element) => {
+                    if (element.getBoundingClientRect().top < window.innerHeight * 0.9) {
+                        element.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const skillBoxes = document.querySelectorAll(".skill-box");
+
+            skillBoxes.forEach(box => {
+                box.addEventListener("click", function () {
+                    // Close all boxes
+                    skillBoxes.forEach(b => {
+                        if (b !== box) {
+                            b.classList.remove("active");
+                        }
+                    });
+
+                    // Toggle the clicked box
+                    box.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="https://media.licdn.com/dms/image/D4E03AQEtFI8f8qagTQ/profile-displayphoto-shrink_400_400/0/1694264267515?e=1728518400&v=beta&t=GUx2tXFB69877RA15w-IczMtW0lFzTV_peVyMDIWX9k" alt="Profile Picture" class="profile-pic">
+            <div class="header-text">
+                <h1 class="animated-text">Srivardhan S</h1>
+                <p class="animated-text">Cybersecurity Enthusiast | Web Developer | AI Enthusiast</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                
+                <li><a href="#education">Education</a></li>
+                <li><a href="#internships">Internship</a></li>
+                <li><a href="#extracurricular">Extracurricular</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>As a third-year B.Tech student specializing in Artificial Intelligence and Data Science at KPR Institute of Engineering and Technology, I am passionate about leveraging my technical skills in cybersecurity, web development, and AI to solve complex challenges. With hands-on experience in vulnerability scanning, password security, and cloud computing, I aim to create secure and innovative solutions that contribute to the ever-evolving tech landscape. My journey is fueled by a deep curiosity and a commitment to continuous learning, making me an adaptable and proactive contributor in any team.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-box">
+                <h3 class="category-title">Languages</h3>
+                <div class="category-content">
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>Basic C</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3 class="category-title">Web Development</h3>
+                <div class="category-content">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3 class="category-title">Networking/Protocols</h3>
+                <div class="category-content">
+                    <ul>
+                        <li>TCP/IP</li>
+                        <li>OSI Model</li>
+                        <li>Networking</li>
+                        <li>HTTPS</li>
+                        <li>VPN</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3 class="category-title">Tools</h3>
+                <div class="category-content">
+                    <ul>
+                        <li>VMware</li>
+                        <li>Linux</li>
+                        <li>AWS</li>
+                        <li>Git</li>
+                        <li>Burp Suite</li>
+                        <li>Nmap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                <thead>
+                    <tr style="background-color: #333333;">
+                        <th style="border: 1px solid #4CAF50; padding: 10px; color: #4CAF50;">Level</th>
+                        <th style="border: 1px solid #4CAF50; padding: 10px; color: #4CAF50;">Institution</th>
+                        <th style="border: 1px solid #4CAF50; padding: 10px; color: #4CAF50;">Stream</th> <!-- Added Stream Column -->
+                        <th style="border: 1px solid #4CAF50; padding: 10px; color: #4CAF50;">Percentage/CGPA</th>
+                        <th style="border: 1px solid #4CAF50; padding: 10px; color: #4CAF50;">Year of Completion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">10th Grade</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">Counian Matric Higher Secondary School</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">-</td> <!-- No Stream for 10th Grade -->
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">85%</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">2020</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">12th Grade</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">Counian Matric Higher Secondary School</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">Science</td> <!-- Stream for 12th Grade -->
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">92%</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">2022</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">B.Tech</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">KPR Institute of Engineering and Technology</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">Artificial Intelligence and Data Science</td> <!-- Stream for B.Tech -->
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">CGPA: 8.042</td>
+                        <td style="border: 1px solid #4CAF50; padding: 10px;">2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="internships">
+        <div class="container">
+            <h2>Internships</h2>
+            <div class="experience-item">
+                <h3>Cyber Security & Ethical Hacking Internship at CODTECH IT SOLUTIONS</h3>
+                <p><strong>Role:</strong> Intern | <strong>Date:</strong> June - July 2024</p>
+                <ul>
+                    <li>Developed a Vulnerability Scanning Tool to identify common security vulnerabilities.</li>
+                    <li>Implemented a Password Strength Checker to provide feedback on password security.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Cloud Computing using AWS Internship at One Data Software Solutions</h3>
+                <p><strong>Role:</strong> Intern | <strong>Date:</strong> January - February 2024</p>
+                <ul>
+                    <li>Gained practical experience in infrastructure management.</li>
+                    <li>Completed a 3-week virtual internship focused on cloud computing fundamentals.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="extracurricular">
+        <div class="container">
+            <h2>Extracurricular</h2>
+            <div class="experience-item">
+                <h3>Mastercard Cybersecurity Virtual Experience Program</h3>
+                <p><strong>Role:</strong> Analyst on Security Awareness Team | <strong>Date:</strong> August 2024</p>
+                <ul>
+                    <li>Helped identify and report security threats such as phishing.</li>
+                    <li>Analyzed and identified areas of the business needing more robust security training.</li>
+                    <li>Implemented training courses and procedures for teams.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>JPMorgan Cybersecurity Virtual Experience Program</h3>
+                <p><strong>Role:</strong> Intern on Security Operations Team | <strong>Date:</strong> July 2024</p>
+                <ul>
+                    <li>Assisted in the investigation of security incidents and vulnerabilities.</li>
+                    <li>Conducted vulnerability assessments and provided recommendations for remediation.</li>
+                    <li>Participated in incident response and threat management.</li>
+                </ul>
+            </div>
+                        <div class="experience-item">
+                <h3>AWS APAC Solutions Architecture Virtual Experience Program</h3>
+                <p><strong>Role:</strong> Solutions Architect | <strong>Date:</strong> August 2024</p>
+                <ul>
+                    <li>Designed a simple and scalable hosting architecture based on Elastic Beanstalk for a client.</li>
+                    <li>Described proposed architecture in plain language ensuring client understanding and cost calculation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Google Cybersecurity Professional Certificate</li>
+                <li>Introduction to MongoDB by MongoDB</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Developed a comprehensive tool to identify common security vulnerabilities, including open ports, outdated software versions, and misconfigurations in network and website environments. This tool enhances security by detecting and addressing potential weaknesses</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Implemented a robust algorithm to assess password strength based on length, complexity, and uniqueness. The tool provides valuable feedback on password security, encouraging users to create stronger and more secure passwords.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>Developed a feedback-driven bug prediction system to enhance software quality by predicting potential bugs. It collects user feedback, preprocesses data, and uses machine learning models like decision trees and neural networks for bug prediction. Key technologies include Python and Scikit-learn. This system enabled proactive bug identification, improving software quality and user satisfaction.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: srivarthansugumar2005@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/srivardhan-s3/"> Linkedin Profile</a></p>
+             <p>GitHub: <a href="https://github.com/srivardhan03" target="_blank">GitHub Profile</a></p>
+        </div>
+    </footer>
+
+    <section id="feedback">
+    <div class="container">
+        <h2>Feedback</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+</body>
+
+</html>
